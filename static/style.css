@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.game {
+    width: min(600px, 90%);
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.drawing {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.gallows {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    width: 150px;
+    height: 250px;
+    border-left: 5px solid #222;
+    border-top: 5px solid #222;
+}
+
+.gallows::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 5px;
+    height: 40px;
+    background: #222;
+}
+
+.part {
+    display: none;
+    position: absolute;
+}
+
+.part.visible {
+    display: block;
+}
+
+.head {
+    width: 55px;
+    height: 55px;
+    border: 5px solid #222;
+    border-radius: 50%;
+    top: 35px;
+    left: 137px;
+}
+
+.body {
+    width: 5px;
+    height: 90px;
+    background: #222;
+    top: 90px;
+    left: 162px;
+}
+
+.arm-left,
+.arm-right {
+    width: 70px;
+    height: 5px;
+    background: #222;
+    top: 110px;
+}
+
+.arm-left {
+    left: 98px;
+    transform: rotate(-35deg);
+}
+
+.arm-right {
+    left: 160px;
+    transform: rotate(35deg);
+}
+
+.leg-left,
+.leg-right {
+    width: 70px;
+    height: 5px;
+    background: #222;
+    top: 170px;
+}
+
+.leg-left {
+    left: 100px;
+    transform: rotate(-45deg);
+}
+
+.leg-right {
+    left: 158px;
+    transform: rotate(45deg);
+}
+
+.eye-left,
+.eye-right {
+    width: 6px;
+    height: 6px;
+    background: #222;
+    border-radius: 50%;
+    top: 55px;
+}
+
+.eye-left {
+    left: 151px;
+}
+
+.eye-right {
+    left: 173px;
+}
+
+.mouth {
+    width: 20px;
+    height: 8px;
+    border-bottom: 4px solid #222;
+    top: 73px;
+    left: 154px;
+}
+
+.rope {
+    width: 5px;
+    height: 40px;
+    background: #222;
+    top: 0;
+    left: 162px;
+}
+
+.word {
+    margin: 25px 0;
+    font-size: 32px;
+    letter-spacing: 8px;
+    font-weight: bold;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input {
+    width: 80px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#guessButton {
+    background: #222;
+    color: white;
+}
+
+#newGameButton {
+    background: #ddd;
+}
+
+#message {
+    min-height: 24px;
+    font-weight: bold;
+}
+
+.used {
+    margin-top: 15px;
+}

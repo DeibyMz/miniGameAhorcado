@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ahorcado</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <main class="game">
+
+        <h1>Ahorcado</h1>
+
+        <section class="hangman">
+
+            <div class="drawing">
+                <div class="gallows"></div>
+
+                <div id="part-1" class="part head"></div>
+                <div id="part-2" class="part body"></div>
+                <div id="part-3" class="part arm-left"></div>
+                <div id="part-4" class="part arm-right"></div>
+                <div id="part-5" class="part leg-left"></div>
+                <div id="part-6" class="part leg-right"></div>
+
+                <div id="part-7" class="part eye-left"></div>
+                <div id="part-8" class="part eye-right"></div>
+                <div id="part-9" class="part mouth"></div>
+                <div id="part-10" class="part rope"></div>
+            </div>
+
+            <div class="word" id="word">
+                _ _ _ _ _
+            </div>
+
+        </section>
+
+        <section class="controls">
+
+            <input
+                id="letter"
+                type="text"
+                maxlength="1"
+                placeholder="Letra"
+                autocomplete="off"
+            >
+
+            <button id="guessButton">
+                Adivinar
+            </button>
+
+            <button id="newGameButton">
+                Nuevo juego
+            </button>
+
+        </section>
+
+        <p id="message"></p>
+
+        <section>
+            <strong>Errores:</strong>
+            <span id="errors">0</span> / 10
+        </section>
+
+        <section class="used">
+            <strong>Letras utilizadas:</strong>
+            <span id="guessed"></span>
+        </section>
+
+    </main>
+
+    <script src="/static/game.js"></script>
+
+</body>
+</html>
