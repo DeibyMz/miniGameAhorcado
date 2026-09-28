@@ -1,0 +1,4 @@
+Crear entorno virtual con "python -m venv venv"
+Activar el entorno con "venv\Scripts\activate"
+instalar los requerimientos con "pip install -r requirements.txt"
+Ejecutar la app con "python app.py"
